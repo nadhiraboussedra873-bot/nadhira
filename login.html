@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connexion — MicroIntern</title><meta name="description" content="Connectez-vous à MicroIntern.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+
+<main class="page"><div class="container auth-wrap"><div class="card"><div class="pic" style="aspect-ratio:21/6"><img src="assets/img/ill-shield.svg" alt=""></div><div class="body"><img class="auth-logo" src="assets/img/logo.jpg" alt="MicroIntern">
+<h1 style="font-size:1.6rem">Connexion</h1>
+<div class="notice err" id="l-err" role="alert" hidden></div>
+<form id="login-form"><div id="l-step1"><div class="field"><label for="l-email">E-mail</label><input id="l-email" type="email" required autocomplete="email"></div>
+<div class="field"><label for="l-pw">Mot de passe</label><input id="l-pw" type="password" required autocomplete="current-password"></div></div>
+<div id="l-step2" hidden><p class="notice" id="l-sent"></p><p class="notice" id="l-demo-code" hidden></p><div class="field"><label for="l-code">Code de vérification</label><input id="l-code" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code" placeholder="123456"></div><div class="actions"><button class="btn ghost sm" id="l-resend" type="button">Renvoyer le code</button><button class="btn ghost sm" id="l-back" type="button">Changer d’e-mail</button></div></div>
+<button class="btn" id="l-btn" type="submit" style="width:100%;margin-top:10px">Se connecter</button></form>
+<p class="small muted" style="margin-top:14px">Pas encore de compte ? <a href="signup.html">Inscription</a>. La récupération de mot de passe n’est pas encore disponible.</p>
+<div class="notice" id="demo-box" hidden style="margin-top:14px"><b>Mode démonstration</b> — comptes d’essai (mot de passe : Demo1234) :<div class="actions" style="margin-top:8px"><button class="btn ghost sm" type="button" data-demo="etudiant@demo.tn">Étudiant</button><button class="btn ghost sm" type="button" data-demo="entreprise@demo.tn">Entreprise</button><button class="btn ghost sm" type="button" data-demo="admin@demo.tn">Admin</button></div></div>
+</div></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/email-config.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('login',MI.initLogin);});</script>
+</body></html>

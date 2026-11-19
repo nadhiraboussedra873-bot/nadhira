@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entretiens IA — MicroIntern</title><meta name="description" content="Simulez un entretien et recevez une note et des conseils.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="page-head"><div class="container"><img src="assets/img/ico-ai.svg" alt=""><div><h1 id="interview-title">Entretiens avec l’IA</h1><p id="interview-sub">Entraînez-vous et progressez avant le vrai entretien.</p></div></div></section>
+<main class="page"><div class="container" style="max-width:860px"><div id="iv-note"></div>
+<div class="panel" id="iv-setup"><h2>Préparer votre entretien</h2><p class="muted">Un recruteur virtuel vous pose 6 questions adaptées à votre domaine. Chaque réponse est analysée automatiquement (contenu, structure, clarté, exemples) et vous recevez une note avec des conseils. Il s’agit d’une analyse par règles, pas d’un avis humain.</p>
+<div class="row2"><div class="field"><label for="iv-field">Domaine</label><select id="iv-field"></select></div><div class="field"><label for="iv-level">Niveau</label><select id="iv-level"></select></div></div>
+<button class="btn" id="iv-start" type="button">Commencer l’entretien</button></div>
+<div id="iv-session" hidden><div class="panel" style="padding:12px 16px"><div style="display:flex;justify-content:space-between" class="small"><b id="iv-progress"></b><span class="muted">Répondez comme à l’oral</span></div><div class="score" style="margin-bottom:0"><i id="iv-progress-bar" style="width:0"></i></div></div>
+<div class="chatbox" id="iv-chat" aria-live="polite"></div>
+<form id="iv-form" style="margin-top:12px"><label for="iv-answer" class="sr-only">Votre réponse</label><textarea id="iv-answer" placeholder="Tapez votre réponse…"></textarea><div class="actions" style="margin-top:8px"><button class="btn" type="submit">Répondre</button><button class="btn ghost" id="iv-skip" type="button">Passer la question</button></div></form></div>
+<div id="iv-report" hidden></div>
+<h2 style="margin-top:30px">Historique de vos séances</h2><div id="iv-history"><p class="muted small">Connectez-vous pour retrouver vos séances.</p></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/interview.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('interview',MI.initInterviewPage);});</script>
+</body></html>

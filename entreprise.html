@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Espace entreprise — MicroIntern</title><meta name="description" content="Publiez vos offres et gérez vos candidatures.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="page-head"><div class="container"><img src="assets/img/ico-company.svg" alt=""><div><h1 id="entreprise-title">Espace entreprise</h1><p id="entreprise-sub">Offres, cahiers des charges et candidatures.</p></div></div></section>
+<main class="page"><div class="container" id="e-main">
+<div class="tabs" id="e-tabs" role="tablist"><button type="button">Publier une offre</button><button type="button">Mes offres</button><button type="button">Candidatures reçues</button></div>
+<div id="e-new"><form class="panel" id="job-form"><h2>Nouvelle offre</h2>
+<div class="field"><label for="e-title">Titre de l’offre</label><input id="e-title" type="text" required maxlength="160"></div>
+<div class="row3"><div class="field"><label for="e-type">Type</label><select id="e-type"></select></div><div class="field"><label for="e-cat">Domaine</label><select id="e-cat"></select></div><div class="field"><label for="e-level">Niveau souhaité</label><select id="e-level"></select></div></div>
+<div class="field"><label for="e-desc">Description</label><textarea id="e-desc" required maxlength="4000"></textarea></div>
+<h3>Cahier des charges</h3>
+<div class="field"><label for="e-obj">Objectifs</label><textarea id="e-obj" required></textarea></div>
+<div class="field"><label for="e-liv">Livrables attendus</label><textarea id="e-liv" required></textarea></div>
+<div class="field"><label for="e-con">Contraintes (délais, outils, confidentialité)</label><textarea id="e-con"></textarea></div>
+<div class="row3"><div class="field"><label for="e-budget">Rémunération (DT)</label><input id="e-budget" type="number" min="0" step="1"></div><div class="field"><label for="e-dur">Durée</label><input id="e-dur" type="text" placeholder="3 semaines, 6 mois…"></div><div class="field"><label for="e-loc">Lieu</label><input id="e-loc" type="text" placeholder="Tunis, Télétravail…"></div></div>
+<div class="field"><label for="e-skills">Compétences demandées (virgules)</label><input id="e-skills" type="text"></div>
+<label class="check"><input type="checkbox" id="e-remote">Télétravail possible</label>
+<p class="small muted">Votre offre sera vérifiée par un administrateur avant d’être publiée.</p>
+<button class="btn" id="e-btn" type="submit">Envoyer pour validation</button></form></div>
+<div id="e-jobs"></div><div id="e-apps"></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('entreprise',MI.initEntreprise);});</script>
+</body></html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Messages — MicroIntern</title><meta name="description" content="Messagerie entre étudiants et entreprises.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="page-head"><div class="container"><img src="assets/img/ico-chat.svg" alt=""><div><h1>Messagerie</h1><p>Échangez directement avec les étudiants ou les entreprises.</p></div></div></section>
+<main class="page"><div class="container"><div class="m-wrap"><div id="m-list"></div><div class="panel" id="m-thread"></div></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('messages',MI.initMessages);});</script>
+</body></html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Offres — MicroIntern</title><meta name="description" content="Missions, stages, PFE et emplois pour étudiants.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="page-head"><div class="container"><img src="assets/img/ico-search.svg" alt=""><div><h1 id="jobs-title">Offres</h1><p id="jobs-sub">Missions, stages, stages PFE et premiers emplois.</p></div></div></section>
+<main class="page"><div class="container layout">
+<form class="card filters" id="filters" role="search"><h3>Filtres</h3>
+<div class="field"><label for="f-q">Mot-clé</label><input id="f-q" type="text" placeholder="Ex. Figma, SEO, Python"></div>
+<div class="field"><label for="f-type">Type</label><select id="f-type"></select></div>
+<div class="field"><label for="f-cat">Domaine</label><select id="f-cat"></select></div>
+<div class="field"><label for="f-lvl">Niveau</label><select id="f-lvl"></select></div>
+<label class="check"><input type="checkbox" id="f-remote">Télétravail possible</label>
+<button class="btn" type="submit" style="width:100%">Rechercher</button></form>
+<div><p class="muted" id="count" aria-live="polite"></p><div id="results"></div></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('jobs',MI.initJobs);});</script>
+</body></html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inscription — MicroIntern</title><meta name="description" content="Créez votre compte étudiant ou entreprise.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+
+<main class="page"><div class="container auth-wrap"><div class="card"><div class="pic" style="aspect-ratio:21/6"><img src="assets/img/ill-users.svg" alt=""></div><div class="body"><img class="auth-logo" src="assets/img/logo.jpg" alt="MicroIntern">
+<h1 style="font-size:1.6rem" id="s-title">Inscription</h1>
+<div class="notice err" id="s-err" role="alert" hidden></div>
+<form id="signup-form">
+<div class="seg" role="radiogroup" aria-label="Type de compte"><label><input type="radio" name="type" value="student" checked><span>Étudiant</span></label><label><input type="radio" name="type" value="company"><span>Entreprise</span></label></div>
+<div class="row2"><div class="field"><label for="s-first">Prénom</label><input id="s-first" type="text" required autocomplete="given-name"></div><div class="field"><label for="s-last">Nom</label><input id="s-last" type="text" required autocomplete="family-name"></div></div>
+<div class="field" id="s-company-row" hidden><label for="s-company">Nom de l’entreprise</label><input id="s-company" type="text" autocomplete="organization"></div>
+<div class="row2" id="s-legal-row" hidden><div class="field"><label for="s-mf">Matricule fiscale</label><input id="s-mf" type="text" placeholder="1234567A"></div><div class="field"><label for="s-rne">Identifiant RNE</label><input id="s-rne" type="text" placeholder="B0123452020"></div></div>
+<div class="field"><label for="s-email">E-mail</label><input id="s-email" type="email" required autocomplete="email"></div>
+<div class="field"><label for="s-pw">Mot de passe</label><input id="s-pw" type="password" required minlength="8" autocomplete="new-password"><div class="hint">8 caractères minimum.</div></div>
+<div class="field"><label for="s-pw2">Confirmer le mot de passe</label><input id="s-pw2" type="password" required minlength="8" autocomplete="new-password"></div>
+<button class="btn" id="s-btn" type="submit" style="width:100%">Créer mon compte</button></form>
+<p class="small muted" style="margin-top:14px">Déjà inscrit ? <a href="login.html">Connexion</a></p></div></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('signup',MI.initSignup);});</script>
+</body></html>

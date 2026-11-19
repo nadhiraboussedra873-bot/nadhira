@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Administration — MicroIntern</title><meta name="description" content="Validation des offres et suivi de la plateforme.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="page-head"><div class="container"><img src="assets/img/ico-shield.svg" alt=""><div><h1 id="admin-title">Administration</h1><p id="admin-sub">Validation des offres, utilisateurs et statistiques.</p></div></div></section>
+<main class="page"><div class="container" id="a-main"><div class="tile-row five" id="a-tiles"></div>
+<div class="tabs" id="a-tabs" role="tablist"><button type="button">Offres à valider</button><button type="button">Toutes les offres</button><button type="button">Utilisateurs</button></div>
+<div id="a-pending"></div><div id="a-all"></div><div id="a-users"></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('admin',MI.initAdmin);});</script>
+</body></html>

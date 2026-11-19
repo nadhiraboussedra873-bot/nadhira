@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mon CV — MicroIntern</title><meta name="description" content="Créez et améliorez votre CV professionnel.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="page-head"><div class="container"><img src="assets/img/ico-cv.svg" alt=""><div><h1 id="cv-title">Mon CV professionnel</h1><p id="cv-sub">Aperçu en direct, score de qualité et missions ajoutées automatiquement.</p></div></div></section>
+<main class="page"><div class="container cv-layout">
+<form id="cv-form" class="panel" novalidate>
+<h2>Mes informations</h2>
+<div class="row2"><div class="field"><label for="f-first">Prénom</label><input id="f-first" type="text"></div><div class="field"><label for="f-last">Nom</label><input id="f-last" type="text"></div></div>
+<div class="field"><label for="f-headline">Titre professionnel</label><input id="f-headline" type="text" maxlength="160" placeholder="Étudiante en Master Finance, à la recherche d’un stage"></div>
+<div class="row3"><div class="field"><label for="f-level">Niveau</label><select id="f-level"></select></div><div class="field"><label for="f-study">Statut</label><select id="f-study"></select></div><div class="field"><label for="f-field">Domaine</label><select id="f-field"></select></div></div>
+<div class="row2"><div class="field"><label for="f-school">École / université</label><input id="f-school" type="text"></div><div class="field"><label for="f-city">Ville</label><input id="f-city" type="text"></div></div>
+<div class="row2"><div class="field"><label for="f-phone">Téléphone</label><input id="f-phone" type="tel"></div><div class="field"><label for="f-links">Lien (LinkedIn, GitHub, portfolio)</label><input id="f-links" type="text"></div></div>
+<div class="field"><label for="f-bio">Résumé professionnel</label><textarea id="f-bio" maxlength="2000"></textarea><button class="btn ghost sm" id="gen-bio" type="button" style="margin-top:6px">Générer un résumé</button></div>
+<div class="field"><label for="f-skills">Compétences (séparées par des virgules)</label><input id="f-skills" type="text" placeholder="Figma, SEO, Python…"></div>
+<div class="field"><label for="f-langs">Langues</label><input id="f-langs" type="text" placeholder="Français, Anglais, Arabe"></div>
+<h3>Formation</h3><div class="list-edit" id="edu-list"></div><button class="btn ghost sm" id="add-edu" type="button">+ Ajouter une formation</button>
+<h3 style="margin-top:18px">Autres expériences</h3><div class="list-edit" id="exp-list"></div><button class="btn ghost sm" id="add-exp" type="button">+ Ajouter une expérience</button>
+<div class="actions" style="margin-top:20px"><button class="btn" id="cv-save" type="submit">Enregistrer</button><button class="btn ghost" id="cv-print" type="button">Imprimer / PDF</button></div>
+</form>
+<div><div class="panel"><h3><img class="ico" src="assets/img/ico-target.svg" alt="">Qualité du CV : <span id="cv-score-num"></span></h3><div class="score"><i id="cv-score-bar"></i></div><p class="small muted" id="cv-done"></p><ul class="tips" id="cv-tips"></ul></div>
+<div class="cv-sheet" id="cv-preview" aria-label="Aperçu du CV"></div></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/cv.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('cv',MI.initCvPage);});</script>
+</body></html>

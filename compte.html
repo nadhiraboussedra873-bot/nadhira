@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mon espace — MicroIntern</title><meta name="description" content="Suivi de vos candidatures, missions et entretiens.">
+<link rel="icon" href="assets/img/logo.jpg" type="image/jpeg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="site-header"></div>
+<section class="page-head"><div class="container"><img src="assets/img/ico-student.svg" alt=""><div><h1 id="compte-title">Mon espace</h1><p id="compte-sub">Candidatures, missions réalisées et entretiens.</p></div></div></section>
+<main class="page"><div class="container">
+<div class="panel" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><img class="ico" style="width:56px;height:56px" src="assets/img/ico-student.svg" alt=""><div><h2 id="c-name" style="margin:0"></h2><span class="muted" id="c-email"></span></div><div class="actions" style="margin-left:auto"><a class="btn" href="cv.html">Mon CV</a><a class="btn ghost" href="jobs.html">Chercher une offre</a></div></div>
+<div class="tile-row" id="c-tiles"></div>
+<div class="tabs" id="c-tabs" role="tablist"><button type="button">Candidatures</button><button type="button">Missions terminées</button><button type="button">Entretiens IA</button></div>
+<div id="c-apps"></div><div id="c-done"></div><div id="c-iv"></div></div></main>
+<div id="site-footer"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script defer src="js/supabase-client.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/api-demo.js"></script>
+<script defer src="js/api-supabase.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/chatbot.js"></script>
+<script defer src="js/pages.js"></script>
+<script defer src="js/extras.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){MI.boot('compte',MI.initCompte);});</script>
+</body></html>
